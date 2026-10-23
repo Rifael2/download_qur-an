@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
-import 'screens/home_screen.dart';
-import 'screens/welcome_screen.dart';
-import 'store.dart';
-import 'theme.dart';
+import 'core/theme.dart';
+import 'pages/welcome_page.dart';
 
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Store.init();
+void main() {
   runApp(const QuranApp());
 }
 
@@ -20,13 +15,8 @@ class QuranApp extends StatelessWidget {
     return MaterialApp(
       title: 'Quran App',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
-        scaffoldBackgroundColor: Colors.white,
-        textTheme: GoogleFonts.poppinsTextTheme(),
-      ),
-      home: Store.seenWelcome ? const HomeScreen() : const WelcomeScreen(),
+      theme: AppTheme.light(),
+      home: const WelcomePage(),
     );
   }
 }

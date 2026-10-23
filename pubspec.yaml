@@ -1,5 +1,5 @@
 name: quran_app
-description: Aplikasi Al-Quran (MyQuran API v3)
+description: Aplikasi Al-Qur'an (daftar surah, juz, halaman, dan ayat acak) berbasis Flutter dengan data dari MyQuran API v3.
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -9,10 +9,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  http: ^1.2.2
-  google_fonts: ^6.2.1
-  shared_preferences: ^2.3.2
-  just_audio: ^0.9.40
+  http: ^1.6.0
+  google_fonts: 6.3.3
+  audioplayers: ^6.8.1
+  shared_preferences: ^2.5.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
 
 flutter:
   uses-material-design: true
